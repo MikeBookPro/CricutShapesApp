@@ -1,5 +1,5 @@
 //
-//  CricutShapesAppApp.swift
+//  CricutShapesApp.swift
 //  CricutShapesApp
 //
 //  Created by Michael Thornton on 5/3/25.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct CricutShapesAppApp: App {
+struct CricutShapesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CricutShapes()
         }
     }
 }

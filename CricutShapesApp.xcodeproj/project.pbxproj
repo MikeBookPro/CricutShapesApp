@@ -6,23 +6,38 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2721E1502DC5F075004F73C2 /* ShapeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2721E14F2DC5F075004F73C2 /* ShapeKit */; };
+		2721E1842DC5F740004F73C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2721E1772DC5F740004F73C2 /* Preview Assets.xcassets */; };
+		2721E1852DC5F740004F73C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2721E1792DC5F740004F73C2 /* Assets.xcassets */; };
+		2721E1862DC5F740004F73C2 /* ShapeKit in Resources */ = {isa = PBXBuildFile; fileRef = 2721E1822DC5F740004F73C2 /* ShapeKit */; };
+		2721E1872DC5F740004F73C2 /* CricutShapesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721E1742DC5F740004F73C2 /* CricutShapesApp.swift */; };
+		2721E1892DC5F740004F73C2 /* ShapesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721E17C2DC5F740004F73C2 /* ShapesGrid.swift */; };
+		2721E18A2DC5F740004F73C2 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721E17D2DC5F740004F73C2 /* Triangle.swift */; };
+		2721E18B2DC5F740004F73C2 /* CricutShapesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721E17F2DC5F740004F73C2 /* CricutShapesViewModel.swift */; };
+		2721E1922DC6D36C004F73C2 /* GridEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721E1912DC6D367004F73C2 /* GridEditor.swift */; };
+		2721E1942DC6EDEC004F73C2 /* CricutShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721E1932DC6EDD3004F73C2 /* CricutShapes.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		2721E12A2DC5E3AE004F73C2 /* CricutShapesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricutShapesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2721E1742DC5F740004F73C2 /* CricutShapesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricutShapesApp.swift; sourceTree = "<group>"; };
+		2721E1772DC5F740004F73C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2721E1792DC5F740004F73C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2721E17C2DC5F740004F73C2 /* ShapesGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesGrid.swift; sourceTree = "<group>"; };
+		2721E17D2DC5F740004F73C2 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		2721E17F2DC5F740004F73C2 /* CricutShapesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricutShapesViewModel.swift; sourceTree = "<group>"; };
+		2721E1822DC5F740004F73C2 /* ShapeKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ShapeKit; sourceTree = "<group>"; };
+		2721E1912DC6D367004F73C2 /* GridEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridEditor.swift; sourceTree = "<group>"; };
+		2721E1932DC6EDD3004F73C2 /* CricutShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricutShapes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		2721E12C2DC5E3AE004F73C2 /* CricutShapesApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CricutShapesApp;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2721E1272DC5E3AE004F73C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2721E1502DC5F075004F73C2 /* ShapeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +47,8 @@
 		2721E1212DC5E3AE004F73C2 = {
 			isa = PBXGroup;
 			children = (
-				2721E12C2DC5E3AE004F73C2 /* CricutShapesApp */,
+				2721E1832DC5F740004F73C2 /* CricutShapesApp */,
+				2721E14E2DC5F075004F73C2 /* Frameworks */,
 				2721E12B2DC5E3AE004F73C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +59,69 @@
 				2721E12A2DC5E3AE004F73C2 /* CricutShapesApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2721E14E2DC5F075004F73C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2721E1752DC5F740004F73C2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2721E1742DC5F740004F73C2 /* CricutShapesApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2721E1782DC5F740004F73C2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2721E1772DC5F740004F73C2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2721E17A2DC5F740004F73C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2721E1782DC5F740004F73C2 /* Preview Content */,
+				2721E1792DC5F740004F73C2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2721E17E2DC5F740004F73C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2721E1932DC6EDD3004F73C2 /* CricutShapes.swift */,
+				2721E1912DC6D367004F73C2 /* GridEditor.swift */,
+				2721E17C2DC5F740004F73C2 /* ShapesGrid.swift */,
+				2721E17D2DC5F740004F73C2 /* Triangle.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2721E1812DC5F740004F73C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2721E17F2DC5F740004F73C2 /* CricutShapesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2721E1832DC5F740004F73C2 /* CricutShapesApp */ = {
+			isa = PBXGroup;
+			children = (
+				2721E1752DC5F740004F73C2 /* App */,
+				2721E17E2DC5F740004F73C2 /* View */,
+				2721E1812DC5F740004F73C2 /* ViewModel */,
+				2721E17A2DC5F740004F73C2 /* Resources */,
+				2721E1822DC5F740004F73C2 /* ShapeKit */,
+			);
+			path = CricutShapesApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,11 +139,9 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				2721E12C2DC5E3AE004F73C2 /* CricutShapesApp */,
-			);
 			name = CricutShapesApp;
 			packageProductDependencies = (
+				2721E14F2DC5F075004F73C2 /* ShapeKit */,
 			);
 			productName = CricutShapesApp;
 			productReference = 2721E12A2DC5E3AE004F73C2 /* CricutShapesApp.app */;
@@ -109,6 +186,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2721E1842DC5F740004F73C2 /* Preview Assets.xcassets in Resources */,
+				2721E1852DC5F740004F73C2 /* Assets.xcassets in Resources */,
+				2721E1862DC5F740004F73C2 /* ShapeKit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2721E1922DC6D36C004F73C2 /* GridEditor.swift in Sources */,
+				2721E1872DC5F740004F73C2 /* CricutShapesApp.swift in Sources */,
+				2721E1892DC5F740004F73C2 /* ShapesGrid.swift in Sources */,
+				2721E18A2DC5F740004F73C2 /* Triangle.swift in Sources */,
+				2721E18B2DC5F740004F73C2 /* CricutShapesViewModel.swift in Sources */,
+				2721E1942DC6EDEC004F73C2 /* CricutShapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +337,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CricutShapesApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CricutShapesApp/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = A76ZPUCPM9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -267,6 +353,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MThornton.CricutShapesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -280,7 +370,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CricutShapesApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CricutShapesApp/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = A76ZPUCPM9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -296,6 +386,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MThornton.CricutShapesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -324,6 +418,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2721E14F2DC5F075004F73C2 /* ShapeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ShapeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2721E1222DC5E3AE004F73C2 /* Project object */;
 }
