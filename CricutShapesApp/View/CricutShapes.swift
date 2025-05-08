@@ -21,7 +21,11 @@ struct CricutShapes<ShapeService: ShapesServiceRepresentable>: View {
     
     var body: some View {
         NavigationStack(path: $viewModel.navigationPath) {
-            GridEditor(allShapes: viewModel.shapes) {
+            GridEditor {
+                ShapesGrid(allShapes: viewModel.shapes) {
+                    viewModel.userDidTap(.shapeAt(index: $0))
+                }
+            } footer: {
                 addShapeButtons
             }
             .toolbar {
@@ -39,7 +43,12 @@ struct CricutShapes<ShapeService: ShapesServiceRepresentable>: View {
             }
             .navigationDestination(for: String.self) { destination in
                 if viewModel.circleEditor(isTarget: destination) {
-                    GridEditor(allShapes: viewModel.shapes.filter({ $0 == .circle })) {
+                    GridEditor {
+                        ShapesGrid(allShapes: viewModel.shapes.filter({ $0 == .circle })) {
+                            guard let index = viewModel.shapes.indexOfNth(.circle, occurrence: $0) else { return }
+                            viewModel.userDidTap(.shapeAt(index: index))
+                        }
+                    } footer: {
                         circleEditorButtons
                     }
                     .navigationBarBackButtonHidden(true)
@@ -96,6 +105,7 @@ struct CricutShapes<ShapeService: ShapesServiceRepresentable>: View {
             .padding()
         }
     }
+    
 }
 
 // MARK: - Preview
@@ -107,7 +117,8 @@ struct CricutShapes<ShapeService: ShapesServiceRepresentable>: View {
                 return [
                     .init(name: "Circle", drawPath: .circle),
                     .init(name: "Square", drawPath: .square),
-                    .init(name: "Triangle", drawPath: .triangle)
+                    .init(name: "Triangle", drawPath: .triangle),
+                    .init(name: "Box", drawPath: .box)
                 ]
             }
         }

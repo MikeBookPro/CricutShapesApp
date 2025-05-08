@@ -19,6 +19,16 @@
 		2721E1942DC6EDEC004F73C2 /* CricutShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721E1932DC6EDD3004F73C2 /* CricutShapes.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		27DD2A472DCD41580030AB7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2721E1222DC5E3AE004F73C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2721E1292DC5E3AE004F73C2;
+			remoteInfo = CricutShapesApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2721E12A2DC5E3AE004F73C2 /* CricutShapesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricutShapesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2721E1742DC5F740004F73C2 /* CricutShapesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricutShapesApp.swift; sourceTree = "<group>"; };
@@ -30,7 +40,21 @@
 		2721E1822DC5F740004F73C2 /* ShapeKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ShapeKit; sourceTree = "<group>"; };
 		2721E1912DC6D367004F73C2 /* GridEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridEditor.swift; sourceTree = "<group>"; };
 		2721E1932DC6EDD3004F73C2 /* CricutShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricutShapes.swift; sourceTree = "<group>"; };
+		27DD2A432DCD41580030AB7C /* CricutShapesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricutShapesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		27DD2A442DCD41580030AB7C /* CricutShapesAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CricutShapesAppTests;
+			sourceTree = "<group>";
+		};
+		27DD2A502DCD4C5E0030AB7C /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2721E1272DC5E3AE004F73C2 /* Frameworks */ = {
@@ -41,6 +65,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27DD2A402DCD41580030AB7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -48,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				2721E1832DC5F740004F73C2 /* CricutShapesApp */,
+				27DD2A442DCD41580030AB7C /* CricutShapesAppTests */,
 				2721E14E2DC5F075004F73C2 /* Frameworks */,
 				2721E12B2DC5E3AE004F73C2 /* Products */,
 			);
@@ -57,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				2721E12A2DC5E3AE004F73C2 /* CricutShapesApp.app */,
+				27DD2A432DCD41580030AB7C /* CricutShapesAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +151,7 @@
 				2721E1752DC5F740004F73C2 /* App */,
 				2721E17E2DC5F740004F73C2 /* View */,
 				2721E1812DC5F740004F73C2 /* ViewModel */,
+				27DD2A502DCD4C5E0030AB7C /* Model */,
 				2721E17A2DC5F740004F73C2 /* Resources */,
 				2721E1822DC5F740004F73C2 /* ShapeKit */,
 			);
@@ -139,6 +173,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				27DD2A502DCD4C5E0030AB7C /* Model */,
+			);
 			name = CricutShapesApp;
 			packageProductDependencies = (
 				2721E14F2DC5F075004F73C2 /* ShapeKit */,
@@ -146,6 +183,29 @@
 			productName = CricutShapesApp;
 			productReference = 2721E12A2DC5E3AE004F73C2 /* CricutShapesApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		27DD2A422DCD41580030AB7C /* CricutShapesAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27DD2A4B2DCD41580030AB7C /* Build configuration list for PBXNativeTarget "CricutShapesAppTests" */;
+			buildPhases = (
+				27DD2A3F2DCD41580030AB7C /* Sources */,
+				27DD2A402DCD41580030AB7C /* Frameworks */,
+				27DD2A412DCD41580030AB7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27DD2A482DCD41580030AB7C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				27DD2A442DCD41580030AB7C /* CricutShapesAppTests */,
+			);
+			name = CricutShapesAppTests;
+			packageProductDependencies = (
+			);
+			productName = CricutShapesAppTests;
+			productReference = 27DD2A432DCD41580030AB7C /* CricutShapesAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -159,6 +219,10 @@
 				TargetAttributes = {
 					2721E1292DC5E3AE004F73C2 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					27DD2A422DCD41580030AB7C = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 2721E1292DC5E3AE004F73C2;
 					};
 				};
 			};
@@ -177,6 +241,7 @@
 			projectRoot = "";
 			targets = (
 				2721E1292DC5E3AE004F73C2 /* CricutShapesApp */,
+				27DD2A422DCD41580030AB7C /* CricutShapesAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +254,13 @@
 				2721E1842DC5F740004F73C2 /* Preview Assets.xcassets in Resources */,
 				2721E1852DC5F740004F73C2 /* Assets.xcassets in Resources */,
 				2721E1862DC5F740004F73C2 /* ShapeKit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27DD2A412DCD41580030AB7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +280,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27DD2A3F2DCD41580030AB7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27DD2A482DCD41580030AB7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2721E1292DC5E3AE004F73C2 /* CricutShapesApp */;
+			targetProxy = 27DD2A472DCD41580030AB7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2721E1362DC5E3AF004F73C2 /* Debug */ = {
@@ -396,6 +483,42 @@
 			};
 			name = Release;
 		};
+		27DD2A492DCD41580030AB7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A76ZPUCPM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MThornton.CricutShapesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CricutShapesApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CricutShapesApp";
+			};
+			name = Debug;
+		};
+		27DD2A4A2DCD41580030AB7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A76ZPUCPM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MThornton.CricutShapesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CricutShapesApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CricutShapesApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +536,15 @@
 			buildConfigurations = (
 				2721E1392DC5E3AF004F73C2 /* Debug */,
 				2721E13A2DC5E3AF004F73C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27DD2A4B2DCD41580030AB7C /* Build configuration list for PBXNativeTarget "CricutShapesAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27DD2A492DCD41580030AB7C /* Debug */,
+				27DD2A4A2DCD41580030AB7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

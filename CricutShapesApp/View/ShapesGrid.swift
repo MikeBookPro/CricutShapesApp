@@ -10,6 +10,12 @@ import ShapeKit
 
 struct ShapesGrid: View {
     let allShapes: [ShapeType]
+    let onTapShapeAt: (Int) -> Void
+    
+    init(allShapes: [ShapeType], onTapShapeAt: @escaping (Int) -> Void) {
+        self.allShapes = allShapes
+        self.onTapShapeAt = onTapShapeAt
+    }
 
     private let columns = Array(repeating: GridItem(.flexible()), count: 3)
 
@@ -21,6 +27,9 @@ struct ShapesGrid: View {
                         shapeView(for: allShapes[i])
                             .frame(width: 100, height: 100)
                             .foregroundColor(.brandPrimary)
+                            .onTapGesture {
+                                onTapShapeAt(i)
+                            }
                     }
                     
                     // Anchor to scroll to
@@ -44,22 +53,31 @@ struct ShapesGrid: View {
             case .circle: Circle()
             case .square: Rectangle()
             case .triangle: Triangle()
+            case .box : boxShape
         }
+    }
+    
+    @ViewBuilder private var boxShape: some View {
+        Rectangle()
+            .stroke(Color.brandPrimary, lineWidth: 5)
     }
 }
 
 // MARK: - Preview
 
 #Preview {
-    ShapesGrid(
-        allShapes: [
+    struct PreviewWrapper: View {
+        @State private var shapes: [ShapeType] = [
             .square,
-            .circle,
-            .triangle,
-            .triangle,
-            .square,
-            .circle,
-            .square
+            .box
         ]
-    )
+        
+        var body: some View {
+            ShapesGrid(allShapes: shapes) {
+                shapes.remove(at: $0)
+            }
+        }
+    }
+    
+    return PreviewWrapper()
 }

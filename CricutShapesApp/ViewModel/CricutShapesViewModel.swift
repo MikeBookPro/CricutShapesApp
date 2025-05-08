@@ -16,6 +16,7 @@ public final class CricutShapesViewModel<ShapeService: ShapesServiceRepresentabl
         case removeLast(ShapeType)
         case showCircleEditor
         case dismissEditor
+        case shapeAt(index: Int)
     }
     
     @Published var navigationPath = NavigationPath()
@@ -52,6 +53,9 @@ public final class CricutShapesViewModel<ShapeService: ShapesServiceRepresentabl
                 
             case .dismissEditor:
                 navigationPath.removeLast()
+                
+            case .shapeAt(let index):
+                shapes.remove(at: index)
         }
     }
     

@@ -18,9 +18,13 @@ public protocol ShapesServiceRepresentable {
 
 public struct ShapesService: ShapesServiceRepresentable {
     public init() {}
+    private static let url = (
+        old: "https://staticcontent.cricut.com/static/test/shapes_001.json",
+        new: "https://staticcontent.cricut.com/static/test/tap_shapes_001.json"
+    )
 
     public func fetchShapeDefinitions() async throws -> [ShapeDefinition] {
-        guard let url = URL(string: "https://staticcontent.cricut.com/static/test/shapes_001.json") else {
+        guard let url = URL(string: Self.url.new) else {
             throw URLError(.badURL)
         }
         let (data, _) = try await URLSession.shared.data(from: url)

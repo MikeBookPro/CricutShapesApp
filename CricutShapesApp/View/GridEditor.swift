@@ -8,18 +8,22 @@
 import SwiftUI
 import ShapeKit
 
-struct GridEditor<Footer: View>: View {
-    private let allShapes: [ShapeType]
+struct GridEditor<Content: View, Footer: View>: View {
+    private var content: () -> Content
     private var footer: () -> Footer
     
-    init(allShapes: [ShapeType], @ViewBuilder footer: @escaping () -> Footer) {
-        self.allShapes = allShapes
+    init(
+        @ViewBuilder content: @escaping () -> Content,
+        @ViewBuilder footer: @escaping () -> Footer
+    ) {
+        self.content = content
         self.footer = footer
     }
 
     var body: some View {
         VStack {
-            ShapesGrid(allShapes: allShapes)
+//            ShapesGrid(allShapes: allShapes)
+            content()
             
             Spacer()
             
@@ -36,7 +40,8 @@ struct GridEditor<Footer: View>: View {
         let mockDefinitions = [
             ShapeDefinition(id: UUID(), name: "Circle", drawPath: .circle),
             ShapeDefinition(id: UUID(), name: "Square", drawPath: .square),
-            ShapeDefinition(id: UUID(), name: "Triangle", drawPath: .triangle)
+            ShapeDefinition(id: UUID(), name: "Triangle", drawPath: .triangle),
+            ShapeDefinition(id: UUID(), name: "Box", drawPath: .box)
         ]
         
         @State private var mockShapes: [ShapeType] = [
@@ -51,7 +56,11 @@ struct GridEditor<Footer: View>: View {
         
         var body: some View {
             NavigationStack(path: $path) {
-                GridEditor(allShapes: mockShapes) {
+                GridEditor {
+                    ShapesGrid(allShapes: mockShapes) {
+                        mockShapes.remove(at: $0)
+                    }
+                } footer: {
                     addShapeButtons
                 }
                 .toolbar {
@@ -69,7 +78,12 @@ struct GridEditor<Footer: View>: View {
                 }
                 .navigationDestination(for: String.self) { destination in
                     if destination == "circleEditor" {
-                        GridEditor(allShapes: mockShapes.filter({ $0 == .circle })) {
+                        GridEditor {
+                            ShapesGrid(allShapes: mockShapes.filter({ $0 == .circle })) {
+                                guard let index = mockShapes.indexOfNth(.circle, occurrence: $0) else { return }
+                                mockShapes.remove(at: index)
+                            }
+                        } footer: {
                             circleEditorButtons
                         }
                         .navigationBarBackButtonHidden(true)
