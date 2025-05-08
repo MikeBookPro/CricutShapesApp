@@ -6,10 +6,12 @@
 //
 import Foundation
 
-public struct Shape {
-    let id = UUID()
-    let shapeType: ShapeType
-}
+/// Example of implementing Shape
+/// public struct Shape {
+///     let id = UUID()
+///     let shapeType: ShapeType
+/// }
+
 
 public enum ShapeType: String, Codable, CaseIterable, Identifiable, Sendable {
     case circle
